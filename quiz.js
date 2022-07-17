@@ -29,12 +29,11 @@ function convertingOptionName(option) {
 }
 
 // create Quiz Questions:
+// Question One:
 function quizQuestionOne(quiz) {
   quiz.forEach((question) => {
-    // Question Two:
     let questionOne = question[1].q1.question;
     let answerOptionsOne = question[1].q1.options;
-
     let questionOPtions = answers(answerOptionsOne);
     container_one.innerHTML = `<h4>${questionOne}</h4>${questionOPtions}`;
   });
@@ -45,7 +44,6 @@ function quizQuestionsTwo(quiz) {
   quiz.forEach((question) => {
     let questionTwo = question[1].q2.question;
     let answerOptions = question[1].q2.options;
-
     let questionOPtions = answers(answerOptions);
     container_two.innerHTML = `<h4>${questionTwo}</h4> ${questionOPtions}`;
   });
@@ -73,7 +71,7 @@ function quizQuestionsfour(quiz) {
 let btn = document.querySelector("#display");
 let clearBtn = document.querySelector("#clearBtn");
 
-// f-on te set Local Storage checked inputs
+// f-on to set Local-Storage checked inputs
 let answersChecked = () => {
   let inputs = document.querySelectorAll("input[type='checkbox']:checked");
   let arrInputs = [];
@@ -91,7 +89,6 @@ let answersChecked = () => {
 };
 
 // f-on that clearsStorage:
-
 let clearStorage = () => {
   let inputs = document.querySelectorAll("input");
   inputs.forEach((input) => {
